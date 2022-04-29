@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class listaCititori {
 
-    protected static ArrayList<String> listaNume = new ArrayList<String>();
-    protected static ArrayList<String> listaTari = new ArrayList<String>();
+    public static ArrayList<String> listaNume = new ArrayList<String>();
+    public static ArrayList<String> listaTari = new ArrayList<String>();
 
     public static class cititor extends listaCititori{
 
@@ -30,7 +30,7 @@ public class listaCititori {
             System.out.println(c.idCititor + ". " + c.numeCititor + " din " + c.taraCititor);
         }
 
-        public static void initializeArrayList(listaCititori l1){
+        public static void initializeArrayListCititori(listaCititori l1){
             l1.listaNume.add("Alexandru Gherman");
             l1.listaTari.add("Romania");
             l1.listaNume.add("Zamfira Cristescu");
@@ -56,7 +56,7 @@ public class listaCititori {
             System.out.println("Cum doriti sa existe citiorii?\n1. Predefiniti\n2. Dati de la tastatura");
             int nrCase = scanCase1.nextInt();
             if(nrCase == 1){
-                initializeArrayList(l1);
+                initializeArrayListCititori(l1);
                 System.out.println("\nNume: " + l1.listaNume + "\nTari: " + l1.listaTari);
             }
             else if(nrCase == 2){
